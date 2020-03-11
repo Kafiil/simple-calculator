@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 :root {
-  --main-bg-color: rgb(57, 57, 197);
-  --primary-color: rgb(139, 139, 248);
-  --secondary-color: rgb(60, 87, 243);
-  --warning-color: rgb(235, 20, 20);
+  --main-bg-color: #0e4687;
+  --primary-color: #247ba0;
+  --secondary-color: #70c1b3;
+  --warning-color: #ff1654;
+  --white: #f3ffbd;
 }
 *,
 *::after,
@@ -15,7 +17,7 @@
 html {
   box-sizing: border-box;
   font-size: 10px;
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif !important;
 }
 
 body {
@@ -34,19 +36,19 @@ span {
 .calculator {
   display: grid;
   position: relative;
+  border: 1px solid var(--primary-color);
+  min-width: 300px;
+  min-height: 400px;
 }
 
 .calculator .value {
   grid-column: span 4;
-  font-size: 2rem;
-  padding: 2rem;
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif !important;
+  padding: 1.5rem 1rem;
   outline: none;
   color: black;
   text-align: right;
-}
-.calculator .c {
-  grid-column: span 2;
-  background-color: var(--warning-color);
 }
 
 .calculator span {
@@ -54,8 +56,12 @@ span {
   place-items: center;
   padding: 1.5rem;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--white);
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.calculator .c {
+  grid-column: span 2;
+  background-color: var(--warning-color);
 }
 .calculator span:active {
   background-color: var(--warning-color);
